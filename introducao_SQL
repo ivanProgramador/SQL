@@ -1,0 +1,35 @@
+principais bancos de dados relacionais
+
+- MYSQL
+- POSTGREE SQL
+- SQL SERVER (MICROSOFT)
+- ORACLE
+
+Sobre SQL sql é uma linguagem de manipulação e controle de bancos de dados relacionais, ela e dividida em 5 sublinguagens.
+são elas 
+
+DDL - DATA DEFINITION LANGUAGE 
+   A liguagem de definição de dados  serve para remover / alterar/apagar bancos de dados ,tabelas, linhas, ou seja ela não manipula
+   exatamente os dados e sim a estrutura que recebem os dados.
+
+DML - DATA MANIPULATION LANGUAGE
+   A linguagem de manipulação de dados serve para tratar diretamente dos registros contidos nas estrturas de dados.
+
+DCL - DATA CONTROL LANGUAGE
+   A liguagem de controle de dados serve para controlar quem pode ter acesso aos dados 
+
+DTL - DATA TRANSACTION LANGUAGE
+   A linguagem de transação de dados, todas as operações feitas em um banco de dados são entre o SGBD eo banco de dados essa sub liguagem
+   consegue autorizar ou bloquear as transações entre banco e SGBD dependendo da rega de negocio configurada.
+
+DQL - DATA QUERY LANGUAGE 
+   A liguegem de consulta de dados traz os dados contidos no banco conforme a sintaxe de consulta e parametros matematicos ou associativos definidos.
+
+
+
+
+
+
+
+
+
