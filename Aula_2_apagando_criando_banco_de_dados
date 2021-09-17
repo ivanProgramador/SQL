@@ -1,0 +1,32 @@
+-criando e excluindo bancos de dados
+
+Sistema gerenciador de bancos de dados, é um sistema capaz de lidar com varias bases de dados ao mesmo tempo
+ele contem uma interface mais amigavel que um terminal, o susario pode escolher adiministrar a base de dados 
+através de uma interface visual sem precisar digitar todos os comandos ou digita-los normalmente.
+
+As vantegens de uma interface amigavel vão de um melhoramento na produtividade, quanto uma visão mais ampla do
+estado atual de um banco de dados, a uinterface conta com mensagens de notificação que podem dar um feedback mais 
+rapido e deforma mais simples para que até um usuario menos experiente possa entender oque aconteceu.
+
+SQL 
+
+Na sintaxe SQL para criar um banco de dados usa uma sintaxe imperativa onde dizemos oque queremos na sitaxe abaixo 
+diz criar banco de dados db_curso_web; 
+
+CREATE DATABASE db_curso_web;
+
+para apagar um banco de dados basta digitar e executar a instrução drop no sentido literal significa derrubar
+porem no contexto da SQL a palavra DROP seguida do nome DATABASE sigifica descartar , apagar o banco de dados.
+
+DROP DATABASE db_curso_web;
+
+
+
+
+
+
+
+
+
+
+

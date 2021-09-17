@@ -1,0 +1,37 @@
+
+
+Neste caso atabela que será criada vai armaazenar dados de um curso, neste caso é necessario observar com cuidado a ocntexto de cada um dos campos,
+
+O campo   id_curso -> é um campo que recebe como valor numeros inteiros e não pode ser um campo null , não pode ficar vazio.
+
+O campo   imagem_curso -> recebe ate 100 caracteres como valor e nao pode ficar vazio.
+
+O campo   nome_curso -> tem o limite de ate 50 caracteres e não pode ficar vazio porque se um curso vai ser registrado este deve ter um nome.
+
+O campo   resumo-> é uma campo simples de texto que não tem um limite definido mas segundoa regra de negocio ele pode ficar vazio.
+
+O campo   data_cadastro -> este campo aramazena a data e a hora do cadastro e nao pode ficar vazio.
+
+O campo   ativo -> recebe um valor booleano ou ele e verdaeiro ou falso porem se ele nao for preenchido recebe o valor verdadeiro como default.Tem um detalhe quando ele for preenchido ele deve receber 1 ou 0 sendo 1 vardadeiro e 0 falso.
+
+O campo   investimento -> recebe um numero decimal fracionado mas este tem um detalhe float(8,2) sgnifica que caso o valor seja de 8 digitos em seu total 2 digitos serao os centavos,
+ou reais dependendo do valor o parametro 1 diz que o valor pode ter ate 8 digitos mas se houverem valor quebrados seram repesentado por 2 numeros destes 8.
+
+
+A execução do codigo abaxo cria a tabela
+
+
+CREATE TABLE tb_cursos(
+  
+    id_curso int not null,
+    imagem_curso varchar(100) not null,
+    nome_curso char(50) not null,
+    resumo text null,
+    data_cadastro Datetime not null,
+    ativo boolean DEFAULT TRUE,
+    investimento float(8,2) default 0
+       
+
+);
+
+DROP TABLE tb_cursos; -> para apagar a tabela

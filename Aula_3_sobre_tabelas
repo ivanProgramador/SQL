@@ -1,0 +1,27 @@
+TABELAS
+
+ As tabelas de bancos de dados podem ate ser comparadas a uma planilha porem, vae salientar que esta seria uma definição incompleta,
+ as tabelas de bancos de dados assumen o apel de verdeiros repositórios de dados, assmindo a reponsabilidade de controle armazenamento,
+ e otimização de busca de dados.
+
+ Dentro das tabelas cada campo tem seus tipos e tamanhos podendo ser alterados conforme a regra de negocio do sistema em questão, alguns dos
+ principais tipos são:
+
+ Campos de texto
+
+ - text(tamanho variavel que pode armazenar uma grande quantidade de caracteres)
+ - varchar(tamanho variavel que pode armazenar de 0 a 255 caracteres)
+ - char (tamaanho fixo que pode suportar de 0 a 255 caracteres)
+
+ Campos numericos 
+
+ - int (valores numericos inteiros)
+ - float(valores numericos fracionados)
+
+ Campos de data e hora
+
+ -Date (data no formato YYYY/MM/DD)
+ - Time (Hora)
+ -DateTime(combinação de data e hora em um mesmo campo)
+
+
