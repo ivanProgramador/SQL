@@ -18,7 +18,7 @@ O campo   investimento -> recebe um numero decimal fracionado mas este tem um de
 ou reais dependendo do valor o parametro 1 diz que o valor pode ter ate 8 digitos mas se houverem valor quebrados seram repesentado por 2 numeros destes 8.
 
 
-A execução do codigo abaxo cria a tabela
+A execução do codigo abaixo cria a tabela
 
 
 CREATE TABLE tb_cursos(

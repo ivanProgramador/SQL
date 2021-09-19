@@ -1,0 +1,15 @@
+CHAR
+   
+   Um campo do titpo char ocupa um tamanho fixo dentro do banco de dados independente do valor que esta sendo
+   guradado por ele, por exemplo: se eu crio um campo com char(10) de 10 espaços e coloco neste campo uma informação
+   de apanas 4 ou 3 ou 1 digito. No banco de dados ele vai ocupar 10 os 10 espaços do mesmo jeito.
+
+   As vantagens deste tipo de campo e a velocidade com oque o sistema consegue buscar(pesquisar as informações dentro da tabela)
+   visto que ele fara a busca por um blobo de 10 espaços.
+
+
+VARCHAR
+    
+   Um campo deste tipo assume o tamanho do dados que esta sendo guradado dentro dele se ele for declardo com 10 espaços e nele 
+   for guardada uma palavra com 3 caracteres um campo do tipo varchar vai assumir esse tamanho.   
+
