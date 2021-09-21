@@ -1,0 +1,18 @@
+A isntaxe de inserça de dados em uma tabela é dividida em 2 partes 
+
+Parte 1 seleciona a tabela eos campos 
+
+INSERT INTO tb_cursos(id_curso,imagem_curso,nome_curso,resumo,data_cadastro,ativo,investimento,carga_horaria)
+
+Parte 2 recebe os valores conforme a sequencia de campos
+
+VALUES(2,'curso_angular.jpg','Web Completo JS,TS,Angular','Crie aplicações com JS,TS E Angular','2021-09-21 20:18:40',1,15 ); 
+
+
+Comando completo
+
+INSERT INTO `tb_cursos` (`id_curso`, `imagem_curso`, `nome_curso`, `resumo`, `data_cadastro`, `ativo`, `investimento`, `carga_horaria`) VALUES ('3', 'Angular_curso.jpg', 'Curso completo web Angular', 'Crei aplicaçoes back-end ', '2021-09-22 20:26:34', '1', '550.75', '15');
+
+
+
+
