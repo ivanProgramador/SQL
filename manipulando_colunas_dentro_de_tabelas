@@ -1,0 +1,47 @@
+
+A edição de tabelas é um processo importante pois ao longo da vida util de um sistema as regras de negocio,
+podem mudar conforme a demanda do cliente fazendo com oque sejam adicionadas removidas ou alteradas as estruturas de dados 
+enviadas pelo sistema.
+
+Em SQL a sintaxe para adicionar uma coluna funciona conforme o codigo abaixo é uma sequecia imperativa onde dizemos ao sistema extamente oque queremos
+
+altere a tabela -> nome da tabela adicione adicione a coluna-> nome da coluna tipo de dados- > varchar quantos caracteres -> 5 e que não aceite valores nulos  
+
+Dica: colocar aspas no nome da tabela ou campo pode causar erro.
+
+
+ALTER TABLE tb_cursos  ADD COLUMN carga_horaria varchar(5) not null; 
+
+Alterando o nome de uma coluna da pr perceber que a sintaxe de seleção assume um padrão
+
+--------------------------------------------------------------------------------------------------
+
+SELECIONA A TABELA     |DEFINE A OPERAÇÃO    |NOME ATUAL DA COLUNA   | NOVO NOME E DEMAIS DADOS
+-----------------------------------------------------------------------------------------------------
+|ALTER TABLE tb_cursos |  CHANGE             | carga_horaria         | carga_hora varchar(5) not null;
+---------------------------------------------------------------------------------------------------------
+
+
+Codigo reponsavel por modificar nome de uma coluna
+
+ALTER TABLE tb_cursos  CHANGE carga_horaria carga_hora varchar(5) not null;
+
+OBS: Mesmo não que o tipo ou quantidade de caracteres da coluna em questão sejam alterados estas informações precisam estar presentes na hora da alteração
+
+
+apagando uma coluna
+
+ALTER TABLE tb_cursos DROP carga_horaria;
+
+incluindo denovo 
+
+ALTER TABLE tb_cursos ADD carga_horaria int(5) null;
+
+
+
+
+
+
+
+
+
