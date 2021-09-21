@@ -1,0 +1,17 @@
+A necessidade de alterar o nome de uma tabela pode vir de uma nova regra de negocio ou de um erro no momento de desenvolvimento do banco de dados
+antes de implementar uma base de dados e necessario planejamento, porem apesar de todo o planejamento somos sujeitos a erros, e a instruções de renomar tabelas se faz muito necessaria nestes casos.
+
+Pra renomear uma tebeça usando phpmyadmin
+
+  1 - selecione a tabela 
+  2 - clique na aba operações
+  3 - vai no quadro opçoes de tabela
+  4 - escreva o nome desejdao dentro do campo
+  5 - clique em executar
+
+ Para renomear usando SQL a instrução no total recebe 4 parametros o nome do banco eo nome atual da tabela e depois do TO que neste caso seria para
+ ele recee novamente o nome do banco e em seguida o novo nome da tabela.
+
+ RENAME TABLE `<banco_ e_dados>`.`<nome_atual` TO `<banco_ e_dados>`.`<nome_novo>`;
+
+
