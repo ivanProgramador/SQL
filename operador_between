@@ -1,0 +1,5 @@
+O operador between serve para fazer consultas entre um intervalo especifico o codigo abaixo faz uma consulta 
+para selecionar quaisão os alunos que tem idades entre 18 e 25 anos. Usar o operador between é mais facil que usar 
+> ou < ou >= .... para este tipo de seleção. e possivel usa-lo para selecionar entre intervalo de datas tambem
+
+SELECT * FROM tb_alunos BETWEEN 18 AND 25;

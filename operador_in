@@ -1,0 +1,17 @@
+O operador facilita a sintaxe de uma busca que contem mais de uma condição, 
+no caso o codigo a seguir deseja achar todos os alunos que tem interesse em jogos,
+esportes ou musica.
+
+SELECT * FROM tb_alunos WHERE interesse = 'jogos' OR interesse = 'musica' OR interesse ='esportes';   
+
+essa busca retornou o cadastro de 34 alunos de um total de 100 contidos na tabela, deu certo porem issoi pode ser
+otimizado usando apenas o operador in que lembra uma função, veja agora a busca abaixo usando a função in()
+
+SELECT * FROM tb_alunos WHERE interesse IN('jogos','esportes','musica'); 
+
+
+ele tambem serve para fazer buscas contrarias aos parametros, o ciodigo abaixo usa a palavra not para excluir da busca
+todos os alunos que tem interesse nesses parametros.
+
+SELECT * FROM tb_alunos WHERE interesse NOT IN('jogos','esportes','musica'); 
+
