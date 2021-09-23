@@ -1,0 +1,29 @@
+
+Este arquivo contem codigos que fazem a consulta de dados usando operadores logicos
+para que este teste possa funcionar devem existir 2 condiçoes que justifiquem o uso do oprador logico AND
+
+Neste caso dentro da tabela alunos o codigo abaixo vai selecionar todos os alunos da tabela que tem idade maior que 
+45 e tem interesse em jogos usando o operador logico AND para adicionar a segunda condição. 
+
+SELECT * FROM tb_alunos WHERE interesse = 'jogos' AND idade > 45;
+
+Neste caso ja existe uma terceira condição para a seleção alen de ter a idade maior que 45 anos o alunos deve ter intersse em jogos e 
+morar no RIO GRANDE DO NORTE reparando que opra adico0nar oura condição e so colocar o AND novamente. 
+
+SELECT * FROM tb_alunos WHERE interesse = 'jogos' AND idade > 45 AND estado='RN';
+
+
+Um outro operador lógico mais flexivel pode ser o OR. Porque no caso abaixo ele traz os registros onde ou o aluno 
+tem interesse em jogos ou a idade e mairo que 45 ou mora no rio grande do norte, ou seja se atender a uma destas condições ele aparece 
+no resultado da consulta.
+
+SELECT * FROM tb_alunos WHERE interesse = 'jogos' OR idade > 45 OR estado='RN';
+
+
+
+
+
+
+
+
+
