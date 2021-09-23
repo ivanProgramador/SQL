@@ -1,0 +1,44 @@
+A sintaxe SQL para consulta de dados envolve a instrução SELECT que pertence a DML 
+
+SELECT <colunas> FROM <tabela>
+
+Um exemplo pratico no caso abaixo selecionei  apenas 3 campos de informações da tabela de cursos
+que seram exibidos extamente ana ordem que eu pedi / mas isso não impede que eu adicione mais campo ou retire 
+porque esta tabela na verdade possui 8 colunas.
+
+
+SELECT id_curso,imagem_curso, investimento FROM tb_cursos;
+
+para selecionar todos os campos sem precisar digitar o nome de todos os campos DICA: cuidado ao usar o asterisco em bancos de dados grande pois ele pode trazer varias colunas desnecessarias a sua necessidade.
+
+SELECT * FROM tb_cursos;
+
+
+Selecionando dados usando um filtro usando o WHERE nem sempre precisamos de tudo oque esta nas tebelas e ai que entra o WHERE
+a clasula WHERE na tradução literal e a palavra onde, ou seja apos o WHERE e possivel informa exatamente oque voce deseja ver na tela
+
+WHERE selecionando um registro pelo campo id
+------------------------------------------------------
+
+SELECT id_curso FROM tb_cursos WHERE id_curso = 1;
+
+
+
+WHERE selecionando por nome 
+-----------------------------
+
+SELECT id_curso FROM tb_cursos WHERE nome_curso = 'Linux';
+------------------------------------------------------------------
+
+
+WHERE trazendo um dado por comparaçao usando oprador logico and para comparar os valores 
+-----------------------------------------------------------------------------------------
+
+SELECT id_curso,nome_curso FROM tb_cursos WHERE ivestimento < 500 AND investimento < 550;
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+
