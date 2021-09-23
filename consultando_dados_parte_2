@@ -1,0 +1,30 @@
+Neste arquivo seram apresentados codigos com sintaxe de consultas avançadas com base em uma tabela contendo 100 alunos 
+
+
+
+
+Esta consulta busca por todos os alunos que tenham interesse em jogos 
+
+SELECT  * FROM  tb_alunos WHERE  interesse = 'jogos';
+---------------------------------------------------------------------------
+
+
+Esta consulta busca por todos os alunos que tem a idade menor que 25
+
+SELECT  * FROM  tb_alunos WHERE  idade <25 ;
+
+--------------------------------------------------------------------------
+
+Esta consulta busca por todos os alunos que tem a idade maior ou igual a 35
+
+SELECT  * FROM  tb_alunos WHERE  idade <= 35;
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+
