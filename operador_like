@@ -1,0 +1,102 @@
+ O operador like serve para um tipo de pesquisa mais avançado porque ele não pesqueisa so por uma cadeia de caracteres especificos, ele tem recursos que podem sebstituir o restante de uma palavra e fazer a busca por nome ou qualquer outro dado traves de uma letra ou numero final ou inicial dependendo doque for solicitado.
+
+ Abaixo tem um codigo comum de busca
+
+ SELECT * FROM tb_alunos WHERE nome= 'Evelin';
+
+
+ Versão do mesmo codigo usando o like
+
+ SELECT * FROM tb_alunos WHERE nome LIKE 'Evelin';
+
+ Coringa '%' esse caractere costuma ser um bom aliado do like representando restante dos caracteres
+
+
+ Abaixo o codigo usa o coringa pra pesquisar por todos os nomes que terminan com a letra e ou seja o coringa
+ representa todos os cateres antes da letra e 
+
+ SELECT * FROM tb_alunos WHERE nome LIKE '%e';
+
+ Buscando todos os nomes que terminan com ne
+
+ SELECT * FROM tb_alunos WHERE nome LIKE '%ne';
+
+
+ Buscando todos os nomes que tenham a letra a no meio
+
+ SELECT * FROM tb_alunos WHERE nome LIKE '%a%';
+
+
+ Buscando todos sos nomes que comecem com a letra a
+
+ SELECT * FROM tb_alunos WHERE nome LIKE 'a%';
+
+-----------------------------------------------------------------------------------------
+Usando o coringa _ m uma busca o carctere _ significa 1 caractere indefinido antes do caractere
+desejado o codigo abaixo busca porqueluer nome que tenha 1 caractere indefinido antes da sigla riel
+
+SELECT * FROM tb_alunos WHERE nome LIKE '_riel';
+
+Buscando nome que tenha 1 caractere indefinido de cada lado e no meio tenha a sigla ru
+
+SELECT * FROM tb_alunos WHERE nome LIKE '_ru_';
+
+Buscando nomes que comecem com a letra i e tenham 4 caracteres posteriores
+
+SELECT * FROM tb_alunos WHERE nome LIKE 'i_ _';
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

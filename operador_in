@@ -4,7 +4,7 @@ esportes ou musica.
 
 SELECT * FROM tb_alunos WHERE interesse = 'jogos' OR interesse = 'musica' OR interesse ='esportes';   
 
-essa busca retornou o cadastro de 34 alunos de um total de 100 contidos na tabela, deu certo porem issoi pode ser
+essa busca retornou o cadastro de 34 alunos de um total de 100 contidos na tabela, deu certo porem isso pode ser
 otimizado usando apenas o operador in que lembra uma função, veja agora a busca abaixo usando a função in()
 
 SELECT * FROM tb_alunos WHERE interesse IN('jogos','esportes','musica'); 

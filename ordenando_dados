@@ -1,0 +1,22 @@
+Para ordenar os dados que seram retornados pelas consultas e necessario o uso do coemndo orderby
+
+codigo abaixo implementa o comando order by mas no codigo da pra reparar que todas as operaçoes basicas da buscas sao efetuadas antes deste comando ser acionado ele seleciona tudo define a tabela aplica as condições
+de filtro e depois chama o orderby pra ordenoar , organizar os dados que vao vir nessa busca.
+
+neste caso nome ASC -> significa que os nomes serao ordenados em ordem alfabetica de a para z.
+
+idade DESC -> significa que as idades serao ordenadas de maior para menor  de forma descendente
+
+estado idem ...
+
+
+SELECT 
+ * 
+  FROM
+   tb_alunos
+
+   WHERE
+   idade BETWEEN 18 AND 29
+
+ ORDER BY
+   nome ASC,idade DESC, estado DESC 
