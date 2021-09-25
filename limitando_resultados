@@ -1,0 +1,21 @@
+Tão importante quanto fazer consultas no banco de dados e controlar quantos destes dados podem ser exibidos na tela para um usuario. o comando limit e sempre a utlima instrução por motivos obvios. ele tem que saber oque ele vai trazer e de onde e so depois tem que ser dito a quantidade de dados retornados.
+
+No exemplo abaixo eu peço todos o conteudo da tabela de alunos porem eu peço no maximo 25 resultados 
+
+SELECT * FROM tb_usuarios LIMIT 25;
+
+
+No exemplo abaixo eu peço todos o conteudo da tabela de alunos ordenados de forma decrescente porem eu peço no maximo 25 resultados.
+
+SELECT * FROM tb_alunos ORDER BY id_aluno DESC LIMIT 25;
+
+
+
+
+
+
+
+
+
+
+
