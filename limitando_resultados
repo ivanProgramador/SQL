@@ -9,6 +9,32 @@ No exemplo abaixo eu peço todos o conteudo da tabela de alunos ordenados de for
 
 SELECT * FROM tb_alunos ORDER BY id_aluno DESC LIMIT 25;
 
+-------------------------------------------------------------------------------------------------------
+
+Na maioria das vezes os dados contidos em uma pagina precisan ser limitados para que nao haja um estouro da tela  em relaçao a parte de design e usabilidade. neste caso podemos limitar o retorno das consultas de forma
+controlada.
+
+o codigo abaixo usa como exemplo uma interface que suporta no maximo 4 registros por pagina.O comando OFFSET significa apatir de onde eu quero exibir os registros como a ocntagem dele inicia em 0 se eu coloco 0 no OFFSET
+ele mostra do primeiro ate o 4 registro que seria o valor do LIMIT. 
+
+SELECT * FROM tb_alunos LIMIT 4 OFFSET 0;
+
+mas se na proxima pagina eu quiser mostrar mais registros então eu manteno o valor do limit de 4 registros
+mas eu altero o valor do OFFSET pra ele mostrar os proximos registros apartir de 4 ate 8. então ele vai mostrar do registro 5 em diante. e assim comforme o susrio vai buscando nosvos registros aparecem com base no valor do OFFSET.
+
+SELECT * FROM tb_alunos LIMIT 4 OFFSET 4;
+
+-------------------------------------------------------------------------------------------------------------
+Este comendo tambem pode ser resumido mesmo sem a palavra OFFSET escrita o SQL entende que o numero depois da virgula se trata do valor do OFFSET.Ao inciar a contagem do OFFSET apartir de 0 não use a sintaxe abaixo tem um BUG que nao permite o correto funcionamento deste comando escrito dessa forma então e necessario escrever mesmo o nome OFFSET sea contagem for apartir de 0
+
+SELECT * FROM tb_alunos LIMIT 4,4;
+
+
+
+
+
+
+
 
 
 
