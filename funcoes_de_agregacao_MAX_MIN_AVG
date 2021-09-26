@@ -1,0 +1,114 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MIM() 
+
+trata-se de uma função que retorna o valorminimo encontrado em uma coluna, o codigo abaixo implementa essa função com o ojetivo de descobrir qual eo curso mais barato da tabela de cursos.no reultado vai retonar o valor 0 porque um dos cursos e gratuito.
+
+SELECT MIN(investimento) FROM tb_cursos;
+
+
+usando uma condição de retorno neste caso pra saber qual eo menor valor dos cursos que estão ativos 
+
+SELECT MIN(investimento) FROM tb_cursos WHERE ativo = true;
+
+o resultado muda pra 159.90 porque eo curso mais barato ativo existente na coluna investimento
+
+-------------------------------------------------------------------------------------------------------
+
+MAX()
+
+trata-se deum função contraria ao MIM() pois essa função traz o valor maximo encontrado na coluna selecionada o codigo abaixo traz o maior valor da coluna investimento dos cursos ativos
+
+SELECT MAX(investimento) FROM tb_cursos WHERE ativo = true;
+
+o resultado e 579.90 que eo investimento mais alto dos cursos ativos;
+
+------------------------------------------------------------------------------------------------------
+
+AVG() 
+
+
+trata-se de uma função que compara valores e retorna a media da coluna selecionada
+
+SELECT AVG(investimento) FROM tb_cursos WHERE ativo = true;
+
+o resultado vai calcular a media de valores e retona-la 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------
+COMANDO NOVO
+
+TRUNCATE tb_cursos;
+
+serve pra limpar todos os registros contido dentro da tabela tb_cursos;
+---------------------------------------------------------------------------------------
