@@ -1,0 +1,31 @@
+Estrutura de um comando para apagar dados.
+
+DELETE FROM 
+  <tabela>
+
+WHERE
+ <filtro(s)>
+
+ Apagando um registro
+
+ DELETE FROM 
+  alunos
+
+ WHERE
+  id = 1;
+
+apagando varios registros no caso abaixo solicito a eliminação de todos os alunos
+que tem 20,25 e 40 anos e que o interesse seja esporte e que sejam do estado do AM.
+isso mostra que o delete aceita varios criterios dde seleção.
+
+
+ DELETE FROM 
+  alunos
+
+ WHERE
+  idade IN(20,25,40) AND interesse = 'Esporte' AND estado ='AM';
+
+DICA: 'Em alguns casos ddepenendo da regra de negocio de um sistema o DELETE não é usado para eliminar totalemnte um dado as vezes so um atributo é alterado para que ele não apareça na lista de onde o cliente apagou, as vezes e criada uma especie de pasta lixeira para possibilitar recupração no caso de um acidente como um comenddo dde apagar indevido ou sem querer'
+
+
+
