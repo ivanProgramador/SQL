@@ -1,0 +1,44 @@
+FILTRANDDO SELEÇÕES AGRUPADAS
+
+É importante ver as queries sql mais complexas como camadas.Tomando como exemplo
+a estrutura abaixo
+
+SELECT
+ <colunas>
+
+FROM
+ <tabelas>
+
+WHERE
+ <filtros>
+
+GROUP BY
+ <agrupamento>
+
+ORDER BY
+ <ordenação>
+
+LIMIT
+ <quantidade>, <ponto de partida>
+
+
+Abaixo temos um codigo SQL que segue essa estrutura, basicamente a estrutura baixo busca selecionar quantoa alunos por estado não tem interesse por esportes, so que somente interessa a busca estaddo onde os registros sejam maiores que 3.
+
+
+SELECT
+  estado,COUNT(*) AS total_de_regsitros_por_estado 
+
+FROM
+  tb_alunos
+
+WHERE
+  interesse != 'Esporte'
+
+GROUP BY
+   estado
+   
+HAVING
+   total_de_registros_por_estado > 3
+
+
+

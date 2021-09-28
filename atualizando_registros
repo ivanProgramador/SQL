@@ -1,0 +1,70 @@
+A sintaxe de atualização SQL exige 3 comandos
+
+UPDATE -> TABELA
+SET    -> OQUE SERA ATAULIZADO E PRA QUAL NOVO DADO
+WHERE  -> ONDE
+                                  ESTRUTURA
+---------------------------------------------------------------------------------------
+
+UPDATE
+ <tabela>
+
+SET
+ <coluna> = <valor1> ,  <coluna> = <valor2>, ... , .....
+
+WHERE
+ <filtro(s)> 
+
+
+
+O codigo abaixo executa a atualização no nome de um aluno. primeiro no bloco update ele diz o nome da tabela depois ele diz a coluna e por ultimo ele usa como referncia 
+o id que e uma coluna especifica evitanddo que todos os aunos recebam esta dado como nome.
+
+UPDATE 
+  alunos
+
+SET 
+  nome = 'josé'
+
+WHERE
+  id = 1;
+
+
+
+
+
+Atualizando varios regitros ao mesmo tempo neste caso todos os alunos onde a coluna estado for igual a CE devem ter o interesse alterado para futebol. 
+
+
+UPDATE 
+  alunos
+
+SET 
+  interesse = 'futebol'
+
+WHERE
+  estado = 'CE';
+
+
+
+
+
+Atualizando varias colunas ao mesmo tempo.
+
+
+UPDATE 
+  alunos
+
+SET 
+    nome='josé', interesse = 'musica', estado = 'DF'
+
+WHERE
+  id = 1;
+
+
+
+
+
+
+
+
