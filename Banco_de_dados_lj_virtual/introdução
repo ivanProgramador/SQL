@@ -1,0 +1,5 @@
+O objetivo é criar uma loja virtual onde cada produto tem a sua descrição, deve existir uma tabela, para os produtos
+e outra tabela para as descrições tecnicas, sendo que relacionamento e de  para um.
+
+ produto <-> 1 descrição
+ ---------------------------------------------------------------------------------

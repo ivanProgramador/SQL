@@ -1,0 +1,71 @@
+criando a base de dados.
+
+CREATE DATABASE db_loja_virtual;
+
+criando a tabela de produtos
+
+CREATE TABLE tb_produtos(
+   id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   produto VARCHAR(200) NOT NULL,
+   valor FLOAT(8,2) NOT NULL
+   
+); 
+
+
+Criando a tabela descrição tecnica com a chave estrangeira.Para criar uma tabela com chave estrangeira desntro da tabela tem que ter uma coliuna que vai receber este dado (o valor da chave com o mesmo tipo) por isso essa tabela te uam coluna id_produto que é INT NOT NULL poque não faz sentido existir uma descrição sem produto pra descrever. atenção na ultima linha 
+
+Aqui eu digo que a coluna id_produto vai gusradar io valor de uma chave estrangeira 
+
+FOREIGN KEY(id_produto)
+
+agora eu uso a palavra references para indicar de qual tabela vai vir o valor pra prencher a minha chave estrangeira,
+ai eu digo que ela vem da tb_produtos e entre parentes eu digo de que coluna vai vir o valor. 
+
+REFERENCES tb_produtos(id_produto)
+
+
+
+
+CREATE TABLE tb_descricoes_tecnicas(
+
+  id_descricao_tecnica INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+
+  id_produto INT NOT NULL,
+
+  descricao_tecnica TEXT NOT NULL,
+
+  FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
+
+);
+
+inserindo produtos na tabela produtos 
+-----------------------------------------------------------------------------------
+
+ATENÇÃO: o campo id produto não esta sendo preechido porque quem preeche ele eo SGBD ele se incrmeenta sozinho / a tabela produto precisa ser preenchida primeiro
+senão nao vao exitir porduto pra ligar a descrição e vai dar erro. 
+
+
+INSERT INTO tb_produtos(produto, valor) VALUES ('Notebook Dell Inspiron Ultrafino Intel Core i7, 16GB RAM e 240GB SSD', 3500.00);
+
+INSERT INTO tb_produtos(produto, valor) VALUES ('Smart TV LED 40" Samsung Full HD 2 HDMI 1 USB Wi-Fi Integrado', 1475.54);
+
+INSERT INTO tb_produtos(produto, valor) VALUES ('Smartphone LG K10 Dual Chip Android 7.0 4G Wi-Fi Câmera de 13MP', 629.99);
+
+
+
+inserindo descriçoes na tabela descrição
+--------------------------------------------------------------------------------------
+
+
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (1, 'O novo Inspiron Dell oferece um design elegante e tela infinita que amplia seus sentidos, mantendo a sofisticação e medidas compactas...');
+
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (2, 'A smart TV da Samsung possui tela de 40" e oferece resolução Full HD, imagens duas vezes melhores que TVs HDs padrão...');
+
+INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (3, 'Saia da mesmice. O smartphone LG está mais divertido, rápido, fácil, cheio de selfies e com tela HD de incríveis 5,3"...');
+
+
+
+
+
+
+
