@@ -1,5 +1,18 @@
-O objetivo é criar uma loja virtual onde cada produto tem a sua descrição, deve existir uma tabela, para os produtos
-e outra tabela para as descrições tecnicas, sendo que relacionamento e de  para um.
+
+
+O objetivo é criar uma loja virtual onde cada produto tem a sua descrição, deve existir uma tabela, para os produtos e outra tabela para as descrições tecnicas, sendo que relacionamento e de  para um.
 
  produto <-> 1 descrição
  ---------------------------------------------------------------------------------
+
+ O relacionamento de 1 para muitos neste caso vai ser implementedo usando a tabela imagens, funciona usando oconceito de 1 para muitos porque um produto pode ter varias imagens
+
+ produtos<-> N imagens
+ --------------------------------------------------------------------------------
+
+ O relaciomanto de muitos para muitos faz com oque de fato existam transaçoes de compra e venda
+ pode se dizer que este e um dos conceitos mais importantes aser compreendido para que seja aplicado
+ no caso deste projeto onde esta sendo criado o bd de uma loja virtual e indipensavel que essa ralaçao exista porque um clinte pode fazer varios pedidos assim como um pedido pode conter varios produtos neste caso sera necessaria uma tabela auxiliar pra guardar os dados das trasaçoes de compra e venda 
+
+ que seria varios clientes para verios pedidos que contem varios produtos.
+

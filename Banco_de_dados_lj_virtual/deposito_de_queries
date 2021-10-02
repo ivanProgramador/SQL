@@ -63,7 +63,24 @@ INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (2, 'A 
 
 INSERT INTO tb_descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (3, 'Saia da mesmice. O smartphone LG está mais divertido, rápido, fácil, cheio de selfies e com tela HD de incríveis 5,3"...');
 
+criando a tabela imagens
+--------------------------------------------------------------------------------------------
 
+CREATE TABLE tb_imagens(
+  id_imagem int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id_produto int NOT NULL,
+  FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto),
+  url_imagem VARCHAR(200) NOT NULL
+  
+);
+
+DICA: no caso de arquivos de midia,imagens ou tudo oque não for texto só guarde no banco de dados o texto contendo a  url porque apartir de url a aplicação mesmo se encarrega de buscar a imagem e exibi-la na interface. 
+---------------------------------------------------------------------------------------------
+
+inserindo imagens na tabela imagens
+-------------------------------------------------------------------------------------------
+
+INSERT INTO tb_imagens(1,url_imagem)VALUES(1,'notebook_1.jpg'),(1,'notebook_2.jpg'),(1,'notebook_3.jpg')
 
 
 
