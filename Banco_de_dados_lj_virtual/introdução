@@ -5,14 +5,16 @@ O objetivo é criar uma loja virtual onde cada produto tem a sua descrição, de
  produto <-> 1 descrição
  ---------------------------------------------------------------------------------
 
- O relacionamento de 1 para muitos neste caso vai ser implementedo usando a tabela imagens, funciona usando oconceito de 1 para muitos porque um produto pode ter varias imagens
+ O relacionamento de 1 para muitos neste caso vai ser implementedo usando a tabela imagens, funciona usando o conceito de 1 para muitos porque um produto pode ter varias imagens
 
- produtos<-> N imagens
+ 1 produto <-> N imagens
  --------------------------------------------------------------------------------
 
- O relaciomanto de muitos para muitos faz com oque de fato existam transaçoes de compra e venda
- pode se dizer que este e um dos conceitos mais importantes aser compreendido para que seja aplicado
- no caso deste projeto onde esta sendo criado o bd de uma loja virtual e indipensavel que essa ralaçao exista porque um clinte pode fazer varios pedidos assim como um pedido pode conter varios produtos neste caso sera necessaria uma tabela auxiliar pra guardar os dados das trasaçoes de compra e venda 
+ O relacionamento de muitos para muitos consiste na ideia de que  1 produto pode estar presente
+ em varios pedidos e varios pedidos sendo que 1 pedido pode ter muitos produtos a base deste raciocionio usa a apresença do produto em varios pedidos assim como um cliente pode fazer muitos pedidos um pedidos so pode ter varios clientes.
 
- que seria varios clientes para verios pedidos que contem varios produtos.
+ 1 ciente    <-> n pedidos
+ n pedidos   <-> n clientes
+ 1 pedido    <-> n clientes
+ n produtos  <-> n pedidos
 
