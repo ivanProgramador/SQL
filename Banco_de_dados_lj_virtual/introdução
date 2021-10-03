@@ -10,11 +10,77 @@ O objetivo é criar uma loja virtual onde cada produto tem a sua descrição, de
  1 produto <-> N imagens
  --------------------------------------------------------------------------------
 
- O relacionamento de muitos para muitos consiste na ideia de que  1 produto pode estar presente
- em varios pedidos e varios pedidos sendo que 1 pedido pode ter muitos produtos a base deste raciocionio usa a apresença do produto em varios pedidos assim como um cliente pode fazer muitos pedidos um pedidos so pode ter varios clientes.
+ Criando a tabela clientes
 
- 1 ciente    <-> n pedidos
- n pedidos   <-> n clientes
- 1 pedido    <-> n clientes
- n produtos  <-> n pedidos
+ trata-se de uma tabela simples ela vai conter id,nome,idade do cliente
+ e tera uma relação de 1 para muitos com a atabela pedidos porque um cliente pode ter N pedidos
+ e não pode existir um pedido sem cliente por motivos obvios. 
+
+ O relacionamento de muitos para muitos 
+
+ No caso deste BD de loja virtual esse relacionamento acontece entre duas tabelas são elas:
+
+ tb_pedidos e tb_produtos -> porque um produto pode estra presente em varios pedidos e varios pedidos
+                             podem conter muitos produtos.
+
+ para que este tipo de relacionamento seja possivel e necessario criar um tabela auxiliar, chamada:
+
+ tb_pedidos_produtos -> que recebe os dados do produto e relaciona ele ao pedido e pega os dados do pedido e relaciona ele com o produto. ou seja essa tabela vai conter literalemente o relaciomento entre os dois.e cada novo registro nela significa que um pedido foi feito e esse opedido feito tem um ou mais produtos.
+
+ -----------------------------------------------------------------------------------------------------
+
+tabelas do bd 
+
+tb_clientes
+tb_produtos
+tb_pedidos
+tb_pedidos_produtos
+tb_imagens
+tb_descricoes_tecnicas
+
+mecanica
+
+O produto 
+
+Um produto é cadastrado e este produto tem (id_produto,valor,nome) este produto tambem tem imagens e descrições tecnicas então ele é associado as imagens na tabela(tb_imagens) atraves de seu id uma imagem tem(id_imagem,id_produto(FK),url), e nas decições tecnicas atraves da tabela(b_descricoes_tecnicas ) que tem (id_descricao_tecnica,id_produto(FK),descricao). Então dá pra concluir que 1 produto e constituido por 3 tabelas diferentes tb_produtos,tb_imagens,tb_descricoes_tecnicas.
+
+O cliente
+
+Um cliente é cadastrado no sistema e esta cliente tem(id_cliente,nome,idade) a esta cliente será adicionado um pedido ele será referenciado na tabela pedidos para que um pedido possa ser feito ou registrado ele deve ter um cliente assciado poruqe não pode existir pedido sem cliente.
+
+O pedido
+
+Um pedido e composto por (id_pedido,id_cliente(FK),data_hora) esses dados são necessarios para que se saiba quem pediu oque foi pedido e quando foi pedido.
+
+Os produtos pedidos
+
+A tabela tb_pedidos_produtos na verdade é uma tabela auxiliar que relaciona,conecta um pedido e um produto em
+uma relação de muitos para muitos, em uma caso rela um cliente pode pedir varios produtos e fazer varios pedidos ou apenas pedir muitos produtos de uma vez só, por sua vez um produto pode estar em varios pedidos ou em um pedido só ou seja é uma relação de muitos para muitos.
+
+um item da tabela tb_pedidos_produtos contem id_pedido(FK),id_produto(FK), atraves do id do produto temos 
+
+1 - os dados dele que esta na tabela tb_produtos
+
+e atraves do id_pedido temos
+
+2 - o id do ciente que pediu o produto quanto o id do produto que foi pedido.
+
+embora essa tabela receba poucos dados ajuda muito  na hora de conectar os dois.   
+
+
+
+
+
+-----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 

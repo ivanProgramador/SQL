@@ -120,12 +120,11 @@ crinado a tabela tb_pedido_produto que vai relacionar pedidos e produtoa na rela
 ---------------------------------------------------------------
 
 CREATE TABLE tb_pedidos_produtos(
-   id_pedido INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   id_pedido INT NOT NULL,
    id_produto INT NOT NULL,
-   FOREIGN KEY(id_pedido) REFERENCES tb_pedidos(id_pedido),
+   FOREIGN KEY(id_pedido) REFERENCES  tb_pedidos(id_pedido),
    FOREIGN KEY(id_produto) REFERENCES tb_produtos(id_produto)
    );
-
 ----------------------------------------------------------------------
  inserindo um cliente na tebela clientes
  ----------------------------------------------------------------
@@ -141,7 +140,7 @@ CREATE TABLE tb_pedidos_produtos(
 
  ---------------------------------------------------------
 
- inserindo um pedido na tebela pedidos produtos
+ inserindo um pedido na tebela pedidos produtos,ela so recebe os id´s do pedido e do produto pra compor o pedido
 
  -------------------------------------------------------------
  INSERT INTO tb_pedidos_produtos(id_pedido,id_produto) VALUES(1,2);
@@ -151,12 +150,12 @@ CREATE TABLE tb_pedidos_produtos(
  INSERT INTO tb_pedidos_produtos(id_pedido,id_produto) VALUES(1,3);
 
  ou seja o id do pedido se mantem 1 mas o di do porduto muda isso significa que no pedido 1
- o cliente pediu 2 produtos 
+ o cliente pediu 2 produtos que foram os produtos de id´s  2 e 3.
 
- ela so recebe os id´s do pedido e do produto pra compor o pedido
- ---------------------------------------------------------------
+ 
+ ---------------------------------------------------------------------------------------
 
-
+ 
 
 
 
