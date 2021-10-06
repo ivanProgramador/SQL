@@ -66,12 +66,51 @@ e atraves do id_pedido temos
 2 - o id do ciente que pediu o produto quanto o id do produto que foi pedido.
 
 embora essa tabela receba poucos dados ajuda muito  na hora de conectar os dois.   
-
-
-
-
-
 -----------------------------------------------------------
+
+JOINS - > JUNÇÕES
+
+Geralmente consultas usando JOINS tem como objetivo trazer resultados especificoas ou gerais de mais de uma tabela
+e juntar estes resultados com fins de comparaçao, verificação , organização .....
+
+um exemplo de codigo usando  JOIN neste codigo estou fazendo uma consulta de todos os dados da tabela clientes 
+junto com os dados da tabela pedidos, porem esta sendo exigida uma condição a tabela clientes que esta a esquerda é 
+prioridade essa tem que ser retornada de qualquer jeito, mas os dados da tabela pedidos so devem ser retornados somente 
+se exitir um relaciomaneto coimo eu digo desntro da função ON so seram retronados dados onde o id_cliente tiver o mesmo valor
+do id_cliente na tabela pedidos, ou seja se houver uma relacionamento por meio do id_cliente. ou seja nisso estamos pérguntando 
+quais clientes tem pedidos ligados a seu cadastro.
+
+A função ON() é muito importante para estabelecer as condições dos joins  
+
+
+SELECT
+      *
+FROM 
+     tb_clientes LEFT JOIN tb_pedidos ON(tb_clientes.id_cliente = tb_pedidos.id_cliente);
+
+-------------------------------------------------------------------------------------------------------------------------
+
+A segunda pergunta é quantos produtos tem imagens  ?
+
+da pra observar na condição dentro da função ON() que ele vai porcurar o valor de id_produto dentro da tabela tb_imagens e
+se ele encontrar significa que o porduto tem uma imgam associada a ele senão ele nao estava com o id preechido na tabela.
+
+
+
+SELECT
+      *
+FROM 
+     tb_produtos LEFT JOIN tb_imagens ON(tb_produtos.id_produto = tb_imagens.id_produto);
+
+
+
+
+
+
+
+
+
+
 
 
 
