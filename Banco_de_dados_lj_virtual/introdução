@@ -92,8 +92,8 @@ FROM
 
 A segunda pergunta é quantos produtos tem imagens  ?
 
-da pra observar na condição dentro da função ON() que ele vai porcurar o valor de id_produto dentro da tabela tb_imagens e
-se ele encontrar significa que o porduto tem uma imgam associada a ele senão ele nao estava com o id preechido na tabela.
+da pra observar na condição dentro da função ON() que ele vai procurar o valor de id_produto dentro da tabela tb_imagens e
+se ele encontrar significa que o porduto tem uma imagem associada a ele senão ele nao estava com o id preechido na tabela.
 
 
 
@@ -101,6 +101,41 @@ SELECT
       *
 FROM 
      tb_produtos LEFT JOIN tb_imagens ON(tb_produtos.id_produto = tb_imagens.id_produto);
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+Neste caso a condição se inverte a tabela prioridade fica sendo a tabela da direita e todas os itens de imagem seram exibidos,
+porem somente produtos que tiverem seus ids mensionados na tabela tb_imagesns serão retornados.
+
+
+SELECT
+      *
+FROM 
+     tb_produtos RIGHT JOIN tb_imagens ON(tb_produtos.id_produto = tb_imagens.id_produto);
+
+--------------------------------------------------------------------------------------------------------------------
+
+INNER JOIN 
+
+ O INNER JOIN  não prioriza nem tabela da esquerda e nem da direita e sim as conexoes, as relações entre os registros
+ dastabelas em questão. Todos os regsitros mensionados na consulta que não constituem uma relação seram ignorados pela consulta
+ o codigo abaixo mostra um exemplo.No codigo abaixo ele retorna todos os registros onde houver relação entre a tabela de pedidos
+ e a tabela auxiliar da relaçao entre pedidos e produtos ou seja os registros onde os ids não contam nas tres tabelas seram excluidos do retorno desta consulta. 
+
+
+ SELECT
+      *
+ FROM 
+     tb_pedidos INNER JOIN tb_pedidos_produtos ON(tb_pedidos.id_pedido = tb_pedidos_produtos.id_produto)
+     INNER JOIN  tb_produtos ON(tb_pedidos_produtos.id_produto = tb_produtos.id_produto);
+
+
+
+
+
+
 
 
 
