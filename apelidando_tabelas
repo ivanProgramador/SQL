@@ -1,0 +1,11 @@
+Apelidar tabelas poe ser util quando é necessario fazer uma consulta em tabelas com nomes grandes tornano o codigo menos verboso a exemplo do codigo abaixo.no caso abaixo a tabela tb_produtos tem o pelido de P e a tabela tb_descricoes_tecnicas  ganhou apelido de dt assim nao e necessarios escrever o nome delas completo toda vez que houver necessidade de referencia-las no codigo.
+
+
+SELECT
+      P.id_produto,
+      P.produto,
+      P.valor,
+      dt.descricao_tecnica
+FROM
+     tb_produtos AS P LEFT JOIN tb_descricoes_tecnicas AS dt ON(P.id_produto = dt.id_produto )
+
